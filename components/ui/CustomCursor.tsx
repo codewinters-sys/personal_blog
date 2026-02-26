@@ -59,34 +59,29 @@ export default function CustomCursor() {
   return (
     <>
       {/* Dot */}
-      <motion.div
-        className="cursor-dot"
-        style={{
-          x: springX,
-          y: springY,
-          translateX: '-50%',
-          translateY: '-50%',
-        }}
-        animate={{
-          width: isPointer ? 6 : 8,
-          height: isPointer ? 6 : 8,
-          opacity: visible ? 1 : 0,
-          backgroundColor: isPointer ? '#8b5cf6' : '#3b82f6',
-        }}
-        transition={{ duration: 0.15 }}
-        style={{
-          borderRadius: '50%',
-          position: 'fixed',
-          top: 0,
-          left: 0,
-          x: springX,
-          y: springY,
-          translateX: '-50%',
-          translateY: '-50%',
-          pointerEvents: 'none',
-          zIndex: 99999,
-        }}
-      />
+      {/* Dot */}
+<motion.div
+  animate={{
+    width: isPointer ? 6 : 8,
+    height: isPointer ? 6 : 8,
+    opacity: visible ? 1 : 0,
+    backgroundColor: isPointer ? '#8b5cf6' : '#3b82f6',
+  }}
+  transition={{ duration: 0.15 }}
+  style={{
+    borderRadius: '50%',
+    position: 'fixed',
+    top: 0,
+    left: 0,
+    x: springX,
+    y: springY,
+    translateX: '-50%',
+    translateY: '-50%',
+    pointerEvents: 'none',
+    zIndex: 99999,
+  }}
+/>
+      
 
       {/* Ring */}
       <motion.div
